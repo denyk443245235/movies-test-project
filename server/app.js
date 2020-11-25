@@ -1,9 +1,9 @@
 const express = require('express');
-const authRoter = require('./routes/auth');
 const passport = require('passport');
 const cors = require('cors');
 const cookieSession = require('cookie-session');
 const cookieParser = require("cookie-parser");
+const authRoter = require('./routes/auth');
 const {
   clientUrl,
   port,
@@ -23,7 +23,7 @@ app.use(
   })
 );
 
-app.use(cors({ credentials: true, origin: clientUrl}));
+app.use(cors({credentials: true, origin: clientUrl}));
 app.use(cookieParser());
 app.use(passport.initialize());
 app.use(passport.session());
