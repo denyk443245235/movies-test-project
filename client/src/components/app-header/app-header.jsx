@@ -6,17 +6,17 @@ import Button from '@material-ui/core/Button';
 import { serverUrl } from "../../config";
 import './app-header.css';
 
-const logOut = () => {
+const logout = () => {
   window.open(`${serverUrl}/auth/logout`, '_self');
 };
 
 const AppHeader = () => (
-  <AppBar position="static" style={{ backgroundColor:'#7e57c2' }}>
-    <Toolbar className='app-header-container'>
-      <Typography variant="h6" >
-        Films Api
+  <AppBar position="static" style={{backgroundColor:'#7e57c2'}}>
+    <Toolbar className="app-header-container">
+      <Typography variant="h6">
+        Movies Api
       </Typography>
-      <Button color="inherit" onClick={logOut}>Logout</Button>
+      <Button color="inherit" onClick={logout}>Logout</Button>
     </Toolbar>
   </AppBar>
 );

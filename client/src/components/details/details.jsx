@@ -12,9 +12,9 @@ import { allowedMovieOptions } from '../../config';
 import './details.css';
 
 const Details = () => {
+  const [movieOptions, setMovieOptions] = useState(null);
   const { id } = useParams();
   const history = useHistory();
-  const [ movieOptions, setMovieOptions] = useState(null);
 
   const parseOptionsInArray = () => {
     return Object.keys(movieOptions).filter(item => allowedMovieOptions.indexOf(item) !== -1);
@@ -34,7 +34,7 @@ const Details = () => {
   const descriptionList = () => {
     let arrayOptions = parseOptionsInArray();
     return arrayOptions.map((key, index) => {
-      return  (
+      return (
         <Accordion key={index}>
           <AccordionSummary
             aria-controls="panel1a-content"
@@ -44,7 +44,7 @@ const Details = () => {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              { movieOptions[key] }
+              {movieOptions[key]}
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -56,19 +56,19 @@ const Details = () => {
     return <Preloader/>
   }
 
-  const { Poster, Title } = movieOptions;
+  const {Poster, Title} = movieOptions;
 
   return (
     <div className='details-container'>
       <div>
-        <img src={Poster} alt='icon'/>
+        <img src={Poster} alt="icon"/>
         <Button onClick={returnToDashboard} variant="contained" color="secondary">
           Back to dashboard
         </Button>
       </div>
-      <div className='options-container'>
+      <div className='right-container'>
         <div className='title'>{Title}</div>
-        <div style={{width: '60%'}}>
+        <div className="options-container">
           {descriptionList()}
         </div>
       </div>

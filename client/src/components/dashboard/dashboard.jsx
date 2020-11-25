@@ -51,7 +51,7 @@ const Dashboard = () => {
   }
 
   return (
-    <div className='dashboard-container'>
+    <div className="dashboard-container">
       <Typography variant="h6">
         Hello {userName} please type name of movie, and press Enter
       </Typography>
@@ -63,7 +63,7 @@ const Dashboard = () => {
           marginTop: 20
         }}
       />
-      <div className='cards-container'>
+      <div className="cards-container">
         {moviesList.map(movie => (
           <MovieCard movie={movie} key={movie.imdbID}/>
         ))}

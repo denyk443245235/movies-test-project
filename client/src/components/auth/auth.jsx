@@ -4,13 +4,13 @@ import { serverUrl } from '../../config';
 import './auth.css';
 
 const Auth = () => {
-  const openGooglePage = () => {
+  const openGoogleAuthPage = () => {
     window.open(`${serverUrl}/auth/google`, '_self')
   };
 
   return (
     <div className='auth-container'>
-        <GoogleButton onClick={openGooglePage}/>
+        <GoogleButton onClick={openGoogleAuthPage}/>
     </div>
     )
 };

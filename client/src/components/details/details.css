@@ -4,7 +4,7 @@
     font-family: 'Oswald', sans-serif;
     color: white;
 }
-.options-container {
+.right-container {
     font-size: 30px;
     padding: 30px;
     width: 100%;
@@ -25,4 +25,8 @@
     padding: 5px;
     display: flex;
     justify-content: flex-start;
+}
+
+.options-container {
+    width: 60%;
 }
