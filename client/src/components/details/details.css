@@ -1,0 +1,28 @@
+.details-container {
+    padding: 20px;
+    display: flex;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+.options-container {
+    font-size: 30px;
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.description-item {
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+}
