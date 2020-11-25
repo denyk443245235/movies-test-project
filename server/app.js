@@ -13,7 +13,7 @@ const {
 } = require('./config/keys');
 
 const app = express();
-require('./config/passport-setup');
+require('./config/passport-settup');
 
 app.use(
   cookieSession({
